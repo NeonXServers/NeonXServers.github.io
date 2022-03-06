@@ -165,6 +165,12 @@
         left: -100%;
         opacity: 1;
         transition: all 0.5s ease;
+        -ms-overflow-style: none; /* IE & Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+    /* Chrome, Safari & Opera */
+    .nav-menu::-webkit-scrollbar {
+        display: none;
     }
 
     .nav-menu.active {
@@ -173,6 +179,7 @@
         opacity: 1;
         transition: all 0.5s ease;
         box-shadow: 5px 0 5px -2px #23272a;
+        overflow-y: scroll;
     }
 
     .dropdown-content {
@@ -206,13 +213,13 @@
         }
         100% {
             visibility: visible;
-            max-height: 200px;
+            max-height: 400px;
             opacity: 1;
         }
     }
     @keyframes dropdownOut {
         0% {
-            max-height: 200px;
+            max-height: 400px;
             visibility: visible;
             opacity: 1;
         }
@@ -257,7 +264,7 @@
     }
 
     .nav-item.active .dropdown-content {
-        max-height: 200px;
+        max-height: 400px;
         visibility: visible;
         opacity: 1;
         animation: dropdownIn 0.4s;
@@ -347,15 +354,15 @@
         transform: translate(-50%, 10px);
     }
     .button-hamburguer.active {
-        transform: translateX(-210%);
+        transform: translateX(200%);
         background: transparent;
         box-shadow: none;
     }
     .button-hamburguer.active::before {
-        transform: rotate(45deg) translate(35px, -35px);
+        transform: rotate(45deg) translate(-55px, 55px);
     }
     .button-hamburguer.active::after {
-        transform: rotate(-45deg) translate(35px, 35px);
+        transform: rotate(-45deg) translate(-55px, -55px);
     }
 
     .nav-links-mobile {
@@ -372,10 +379,16 @@
         border: 1px solid #fff;
         transition: all 0.3s ease-out;
     }
-
     .nav-links-mobile:hover {
-        background: #fff;
-        color: #242424;
-        transition: 250ms;
+        text-shadow: 0px 0px 2vmin #0095ff;
+        box-shadow: inset 0px 0px 2vmin -1vmin #0095ff,
+            0px 0px 2vmin -1vmin #0095ff;
+        transition: all 0.3s ease-out;
+    }
+    .nav-links-mobile:active {
+        text-shadow: 0px 0px 2vmin #ff00ff;
+        box-shadow: inset 0px 0px 2vmin -1vmin #ff00ff,
+            0px 0px 2vmin -1vmin #ff00ff;
+        transition: all 0.3s ease-out;
     }
 }

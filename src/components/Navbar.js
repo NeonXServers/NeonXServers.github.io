@@ -1,4 +1,4 @@
-import React, { useState, createRef, useRef } from 'react';
+import React, { useState, createRef, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from './Button';
 import './Navbar.css';
@@ -44,6 +44,10 @@ function Navbar() {
             setButton(true);
         }
     };
+
+    useEffect(() => {
+        showButton();
+    }, []);
     const gtav = useRef();
     const contacto = useRef();
 
@@ -148,19 +152,31 @@ function Navbar() {
                             </div>
                             <ul className='dropdown-content'>
                                 <li className='dropdown-item'>
-                                    <a
+                                    <Link
+                                        to='/'
                                         className='dropdown-links'
-                                        href='https://neonx.page.link/discord'
                                         onClick={closeMobileMenu}
                                     >
                                         Discord
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
+                            <Link
+                                to='/'
+                                className='nav-links-mobile'
+                                onClick={closeMobileMenu}
+                            >
+                                Cualquier Vaina
+                            </Link>
                         </li>
                     </ul>
                     {button && (
-                        <Button buttonStyle={'btn--outline'}>Discord</Button>
+                        <Button
+                            buttonSize={'btn--large'}
+                            buttonStyle={'btn--outline'}
+                        >
+                            Cualquier Vaina
+                        </Button>
                     )}
                 </div>
             </nav>
