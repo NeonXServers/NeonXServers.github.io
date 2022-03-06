@@ -1,4 +1,4 @@
-import React, { useState, createRef, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from './Button';
 import './Navbar.css';
@@ -8,18 +8,18 @@ function Navbar() {
     const [button, setButton] = useState(true);
     const [dropdownButton, setDropdownButton] = useState(false);
     const handleDropdownButton = () => setDropdownButton(!dropdownButton);
+    const closeDropdowns = () => {
+        gtav.current.className = gtav.current.className.replace(' active', '');
+        contacto.current.className = contacto.current.className.replace(
+            ' active',
+            ''
+        );
+    };
     const openDropdown = (id) => {
         handleDropdownButton();
         console.log(id.current);
         if (!id.current.className.includes('active')) {
-            gtav.current.className = gtav.current.className.replace(
-                ' active',
-                ''
-            );
-            contacto.current.className = contacto.current.className.replace(
-                ' active',
-                ''
-            );
+            closeDropdowns();
             id.current.className = id.current.className + ' active';
         } else {
             id.current.className = id.current.className.replace(' active', '');
@@ -27,14 +27,17 @@ function Navbar() {
     };
     const handleClick = () => {
         setClick(!click);
-        gtav.current.className = gtav.current.className.replace(' active', '');
-        contacto.current.className = contacto.current.className.replace(
-            ' active',
-            ''
-        );
+        closeDropdowns();
+        if (!click) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
     };
     const closeMobileMenu = () => {
         setClick(false);
+        document.body.style.overflow = 'auto';
+        closeDropdowns();
     };
 
     const showButton = () => {
@@ -55,6 +58,7 @@ function Navbar() {
 
     return (
         <>
+            <div className='navbar-space'></div>
             <nav className='navbar'>
                 <div className='navbar-container'>
                     <div className='logo-container'>
@@ -153,7 +157,7 @@ function Navbar() {
                             <ul className='dropdown-content'>
                                 <li className='dropdown-item'>
                                     <Link
-                                        to='/'
+                                        to='/discord'
                                         className='dropdown-links'
                                         onClick={closeMobileMenu}
                                     >
@@ -161,17 +165,20 @@ function Navbar() {
                                     </Link>
                                 </li>
                             </ul>
-                            <Link
-                                to='/'
-                                className='nav-links-mobile'
-                                onClick={closeMobileMenu}
-                            >
-                                Cualquier Vaina
-                            </Link>
+                            <div className='nav-item'>
+                                <Link
+                                    to='/'
+                                    className='nav-links-mobile'
+                                    onClick={closeMobileMenu}
+                                >
+                                    Cualquier Vaina
+                                </Link>
+                            </div>
                         </li>
                     </ul>
                     {button && (
                         <Button
+                            to={'/'}
                             buttonSize={'btn--large'}
                             buttonStyle={'btn--outline'}
                         >

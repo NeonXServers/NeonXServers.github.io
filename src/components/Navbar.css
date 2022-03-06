@@ -4,6 +4,9 @@
     font-weight: normal;
     font-style: normal;
 }
+.navbar-space {
+    height: 80px;
+}
 
 .navbar {
     font-family: 'TypoRound';
@@ -156,14 +159,15 @@
     }
 
     .nav-menu {
+        background: #2c2f33;
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 90vh;
+        height: 100vh;
         position: absolute;
+        margin-bottom: 200px;
         top: 80px;
         left: -100%;
-        opacity: 1;
         transition: all 0.5s ease;
         -ms-overflow-style: none; /* IE & Edge */
         scrollbar-width: none; /* Firefox */
@@ -176,7 +180,6 @@
     .nav-menu.active {
         background: #2c2f33;
         left: 0;
-        opacity: 1;
         transition: all 0.5s ease;
         box-shadow: 5px 0 5px -2px #23272a;
         overflow-y: scroll;
@@ -213,13 +216,13 @@
         }
         100% {
             visibility: visible;
-            max-height: 400px;
+            max-height: 1000px;
             opacity: 1;
         }
     }
     @keyframes dropdownOut {
         0% {
-            max-height: 400px;
+            max-height: 1000px;
             visibility: visible;
             opacity: 1;
         }
@@ -264,7 +267,7 @@
     }
 
     .nav-item.active .dropdown-content {
-        max-height: 400px;
+        max-height: 1000px;
         visibility: visible;
         opacity: 1;
         animation: dropdownIn 0.4s;
@@ -272,7 +275,7 @@
     .nav-links {
         justify-content: center;
         padding: 1.5rem;
-        width: 20%;
+        width: 40%;
         margin: 0;
         margin-left: 50%;
         transform: translateX(-50%);
