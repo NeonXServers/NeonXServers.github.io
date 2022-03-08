@@ -22,7 +22,7 @@ export const Heading = ({
     var btns = () => {};
     switch (buttons) {
         case '1':
-            var btns = () => {
+            btns = () => {
                 return (
                     <Button
                         className='btns'
@@ -38,7 +38,7 @@ export const Heading = ({
 
             break;
         case '2':
-            var btns = () => {
+            btns = () => {
                 return (
                     <>
                         <Button
@@ -62,6 +62,8 @@ export const Heading = ({
                     </>
                 );
             };
+            break;
+        default:
             break;
     }
 
