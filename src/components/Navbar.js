@@ -17,7 +17,6 @@ function Navbar() {
     };
     const openDropdown = (id) => {
         handleDropdownButton();
-        console.log(id.current);
         if (!id.current.className.includes('active')) {
             closeDropdowns();
             id.current.className = id.current.className + ' active';
@@ -31,12 +30,12 @@ function Navbar() {
         if (!click) {
             document.body.style.overflow = 'hidden';
         } else {
-            document.body.style.overflow = 'auto';
+            document.body.style.overflow = 'overlay';
         }
     };
     const closeMobileMenu = () => {
         setClick(false);
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = 'overlay';
         closeDropdowns();
     };
 
@@ -156,13 +155,13 @@ function Navbar() {
                             </div>
                             <ul className='dropdown-content'>
                                 <li className='dropdown-item'>
-                                    <Link
-                                        to='/discord'
+                                    <a
+                                        href='https://neonx.page.link/discord'
                                         className='dropdown-links'
                                         onClick={closeMobileMenu}
                                     >
                                         Discord
-                                    </Link>
+                                    </a>
                                 </li>
                             </ul>
                             <div className='nav-item'>

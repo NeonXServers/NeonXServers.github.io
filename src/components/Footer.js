@@ -1,6 +1,5 @@
 import React from 'react';
 import './Footer.css';
-import { Button } from './Button';
 import { Link } from 'react-router-dom';
 
 function Footer() {
@@ -9,33 +8,15 @@ function Footer() {
             <div class='footer-links'>
                 <div className='footer-link-wrapper'>
                     <div class='footer-link-items'>
-                        <h2>About Us</h2>
-                        <Link to='/sign-up'>How it works</Link>
-                        <Link to='/'>Testimonials</Link>
-                        <Link to='/'>Careers</Link>
-                        <Link to='/'>Investors</Link>
-                        <Link to='/'>Terms of Service</Link>
-                    </div>
-                    <div class='footer-link-items'>
-                        <h2>Contact Us</h2>
-                        <Link to='/'>Contact</Link>
-                        <Link to='/'>Support</Link>
-                        <Link to='/'>Destinations</Link>
-                        <Link to='/'>Sponsorships</Link>
-                    </div>
-                </div>
-                <div className='footer-link-wrapper'>
-                    <div class='footer-link-items'>
-                        <h2>Videos</h2>
-                        <Link to='/'>Submit Video</Link>
-                        <Link to='/'>Ambassadors</Link>
-                        <Link to='/'>Agency</Link>
-                        <Link to='/'>Influencer</Link>
+                        <h2>Contáctanos</h2>
+                        <Link to='/contacto'>Contacto</Link>
+                        <Link to='/'>Email</Link>
+                        <Link to='/'>Teléfono</Link>
+                        <Link to='/'>Pito</Link>
                     </div>
                     <div class='footer-link-items'>
                         <h2>Redes Sociales</h2>
                         <Link to='/'>Instagram</Link>
-                        <Link to='/'>Facebook</Link>
                         <Link to='/'>Youtube</Link>
                         <Link to='/'>Twitter</Link>
                         <Link to='/'>Discord</Link>
@@ -44,12 +25,10 @@ function Footer() {
             </div>
             <section class='social-media'>
                 <div class='social-media-wrap'>
-                    <div class='footer-logo'>
-                        <Link to='/' className='social-logo'>
-                            NeonX
-                            <i class='fab fa-typo3' />
-                        </Link>
-                    </div>
+                    <Link to='/' className='social-logo'>
+                        NeonX
+                        <i class='fab fa-typo3' />
+                    </Link>
                     <small class='website-rights'>NeonX © 2022</small>
                 </div>
             </section>
