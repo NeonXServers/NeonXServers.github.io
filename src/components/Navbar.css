@@ -216,13 +216,13 @@
         }
         100% {
             visibility: visible;
-            max-height: 1000px;
+            max-height: 250px;
             opacity: 1;
         }
     }
     @keyframes dropdownOut {
         0% {
-            max-height: 1000px;
+            max-height: 250px;
             visibility: visible;
             opacity: 1;
         }
@@ -267,7 +267,7 @@
     }
 
     .nav-item.active .dropdown-content {
-        max-height: 1000px;
+        max-height: 250px;
         visibility: visible;
         opacity: 1;
         animation: dropdownIn 0.4s;

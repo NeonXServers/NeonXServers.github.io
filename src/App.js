@@ -17,6 +17,7 @@ function App() {
     function showCoverBar() {
         document.body.className = '';
     }
+
     return (
         <>
             <Router>
