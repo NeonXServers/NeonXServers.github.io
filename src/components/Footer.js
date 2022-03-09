@@ -5,16 +5,16 @@ import { Link } from 'react-router-dom';
 function Footer() {
     return (
         <div className='footer-container'>
-            <div class='footer-links'>
+            <div className='footer-links'>
                 <div className='footer-link-wrapper'>
-                    <div class='footer-link-items'>
+                    <div className='footer-link-items'>
                         <h2>Contáctanos</h2>
                         <Link to='/contacto'>Contacto</Link>
                         <Link to='/'>Email</Link>
                         <Link to='/'>Teléfono</Link>
                         <Link to='/'>Pito</Link>
                     </div>
-                    <div class='footer-link-items'>
+                    <div className='footer-link-items'>
                         <h2>Redes Sociales</h2>
                         <Link to='/'>Instagram</Link>
                         <Link to='/'>Youtube</Link>
@@ -23,13 +23,12 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <section class='social-media'>
-                <div class='social-media-wrap'>
+            <section className='social-media'>
+                <div className='social-media-wrap'>
                     <Link to='/' className='social-logo'>
                         NeonX
-                        <i class='fab fa-typo3' />
                     </Link>
-                    <small class='website-rights'>NeonX © 2022</small>
+                    <small className='website-rights'>NeonX © 2022</small>
                 </div>
             </section>
         </div>

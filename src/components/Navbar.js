@@ -9,19 +9,16 @@ function Navbar() {
     const [dropdownButton, setDropdownButton] = useState(false);
     const handleDropdownButton = () => setDropdownButton(!dropdownButton);
     const closeDropdowns = () => {
-        gtav.current.className = gtav.current.className.replace(' active', '');
-        contacto.current.className = contacto.current.className.replace(
-            ' active',
-            ''
-        );
+        gtav.current.classList.remove('active');
+        contacto.current.classList.remove('active');
     };
     const openDropdown = (id) => {
         handleDropdownButton();
         if (!id.current.className.includes('active')) {
             closeDropdowns();
-            id.current.className = id.current.className + ' active';
+            id.current.classList.add('active');
         } else {
-            id.current.className = id.current.className.replace(' active', '');
+            id.current.classList.remove('active');
         }
     };
     const handleClick = () => {
@@ -164,16 +161,16 @@ function Navbar() {
                                     </a>
                                 </li>
                             </ul>
-                            <div className='nav-item'>
-                                <Link
-                                    to='/'
-                                    className='nav-links-mobile'
-                                    onClick={closeMobileMenu}
-                                >
-                                    Cualquier Vaina
-                                </Link>
-                            </div>
                         </li>
+                        <div className='nav-item'>
+                            <Link
+                                to='/'
+                                className='nav-links-mobile'
+                                onClick={closeMobileMenu}
+                            >
+                                Cualquier Vaina
+                            </Link>
+                        </div>
                     </ul>
                     {button && (
                         <Button

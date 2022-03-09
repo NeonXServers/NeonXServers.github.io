@@ -10,12 +10,12 @@ function App() {
     document.body.onmousemove = () => hideCoverBar();
     var showTimeout;
     function hideCoverBar() {
-        document.body.className = 'scrolling';
+        document.body.classList.add('scrolling');
         clearTimeout(showTimeout);
         showTimeout = setTimeout(showCoverBar, 1000);
     }
     function showCoverBar() {
-        document.body.className = '';
+        document.body.classList.remove('scrolling');
     }
 
     return (
