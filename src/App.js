@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Inicio from './components/pages/Inicio';
 import GTAV from './components/pages/GTAV/Inicio';
+import GTAParches from './components/pages/GTAV/Parches';
 function App() {
     document.body.onscroll = () => hideCoverBar();
     document.body.onmousemove = () => hideCoverBar();
@@ -25,6 +26,7 @@ function App() {
                 <Routes>
                     <Route path='/' exact element={<Inicio />} />
                     <Route path='/gtav' element={<GTAV />} />
+                    <Route path='/gtav/patch-notes' element={<GTAParches />} />
                 </Routes>
             </Router>
         </>
