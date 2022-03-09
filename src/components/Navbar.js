@@ -117,10 +117,10 @@ function Navbar() {
                                 <li className='dropdown-item'>
                                     <Link
                                         className='dropdown-links'
-                                        to='/gtav/algo'
+                                        to='/gtav/patch-notes'
                                         onClick={closeMobileMenu}
                                     >
-                                        Algo
+                                        Parches
                                     </Link>
                                 </li>
                                 <li className='dropdown-item'>

@@ -1,0 +1,9 @@
+.container{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.title{
+    margin-top: 20px;
+}
+
