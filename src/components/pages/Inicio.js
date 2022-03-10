@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import '../../App.css';
 import Footer from '../Footer.js';
 import Card from '../Card.js';

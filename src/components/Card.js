@@ -24,7 +24,7 @@ function Card({ path, label, image, text, width, isUrl, tagColor }) {
                         style={{ backgroundColor: '#fff' }}
                         data-category={label}
                     >
-                        <img className='cards__item__img' src={image} />
+                        <img className='cards__item__img' alt="" src={image} />
                     </div>
                     <div className='cards__item__info'>
                         <h5 className='cards__item__text'>{text}</h5>
@@ -42,7 +42,7 @@ function Card({ path, label, image, text, width, isUrl, tagColor }) {
                         style={{ backgroundColor: '#fff' }}
                         data-category={label}
                     >
-                        <img className='cards__item__img' src={image} />
+                        <img className='cards__item__img' alt="" src={image} />
                     </div>
                     <div className='cards__item__info'>
                         <h5 className='cards__item__text'>{text}</h5>

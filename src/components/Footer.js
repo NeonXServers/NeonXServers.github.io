@@ -8,29 +8,23 @@ function Footer() {
             <div className='footer-links'>
                 <div className='footer-link-wrapper'>
                     <div className='footer-link-items'>
-                        <h2>Contáctanos</h2>
-                        <Link to='/contacto'>Contacto</Link>
-                        <Link to='/'>Email</Link>
-                        <Link to='/'>Teléfono</Link>
-                        <Link to='/'>Pito</Link>
+                        <Link className="footer-link" to='/'><i className="bi-envelope-fill" /><p>Email</p></Link>
+                        <Link className="footer-link" to='/'><i className="bi-youtube" /><p>Youtube</p></Link>
                     </div>
+                        <div className='social-media-wrap'>
+                            <Link to='/' className='social-logo'>
+                                NeonX
+                            </Link>
+
+                            <small className='website-rights'>NeonX © 2022</small>
+                        </div>
                     <div className='footer-link-items'>
-                        <h2>Redes Sociales</h2>
-                        <Link to='/'>Instagram</Link>
-                        <Link to='/'>Youtube</Link>
-                        <Link to='/'>Twitter</Link>
-                        <Link to='/'>Discord</Link>
+                        <Link className="footer-link" to='/'><i className="bi-twitter" /><p>Twitter</p></Link>
+                        <a className="footer-link" href='https://neonx.page.link/discord'><i className="bi-discord" /><p>Discord</p></a>
                     </div>
                 </div>
             </div>
-            <section className='social-media'>
-                <div className='social-media-wrap'>
-                    <Link to='/' className='social-logo'>
-                        NeonX
-                    </Link>
-                    <small className='website-rights'>NeonX © 2022</small>
-                </div>
-            </section>
+
         </div>
     );
 }

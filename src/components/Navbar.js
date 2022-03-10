@@ -25,14 +25,14 @@ function Navbar() {
         setClick(!click);
         closeDropdowns();
         if (!click) {
-            document.body.style.overflow = 'hidden';
+            document.body.style.overflowY = 'hidden';
         } else {
-            document.body.style.overflow = 'overlay';
+            document.body.style.overflowY = 'overlay';
         }
     };
     const closeMobileMenu = () => {
         setClick(false);
-        document.body.style.overflow = 'overlay';
+        document.body.style.overflowY = 'overlay';
         closeDropdowns();
     };
 
