@@ -34,7 +34,7 @@ function Inicio() {
                         label='🔥 Hot'
                         path='/news'
                         text='La salida de NeonX GTA V se retrasa'
-                        image= {require('../../images/NeonXLogo.png')}
+                        image={require('../../images/NeonXLogo.png')}
                     />
                     <Card
                         isUrl
