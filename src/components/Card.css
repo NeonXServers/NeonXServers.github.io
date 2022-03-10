@@ -31,6 +31,7 @@ h1 {
 
 .cards__item__pic-wrap {
     --background-color: #0095ff;
+    --background-opacity-color:#0095ff33;
     position: relative;
     width: 100%;
     padding-top: 67%;
@@ -44,7 +45,7 @@ h1 {
 
 .cards__item__pic-wrap::after {
     box-shadow: 0px 0px 1vmin var(--background-color);
-
+    text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
     content: attr(data-category);
     color: var(--background-color) !important;
     border: 3px solid var(--background-color);
@@ -58,7 +59,7 @@ h1 {
     max-width: calc((100%) - 60px);
     font-size: 12px;
     font-weight: 700;
-    background-color: #ffffffa9;
+    background-color: var(--background-opacity-color);
     box-sizing: border-box;
 }
 

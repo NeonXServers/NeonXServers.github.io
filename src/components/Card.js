@@ -11,6 +11,7 @@ function Card({ path, label, image, text, width, isUrl, tagColor }) {
         var cardTag = document.getElementById('card-' + tagColor);
 
         cardTag.style.setProperty('--background-color', tagColor);
+        cardTag.style.setProperty('--background-opacity-color', tagColor+"33");
     }, []);
 
     if (isUrl) {
