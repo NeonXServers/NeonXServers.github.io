@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom';
 
 function Card({ path, label, image, text, width, isUrl, tagColor }) {
     width = width ? width : 'auto';
+    if (!tagColor) {
+        tagColor = '#0095ff';
+    }
     useEffect(() => {
-        var cardTag = document.getElementById('card-tag');
-        if (tagColor) {
-            cardTag.style.setProperty('--background-color', tagColor);
-        }
+        var cardTag = document.getElementById('card-' + tagColor);
+
+        cardTag.style.setProperty('--background-color', tagColor);
     }, []);
 
     if (isUrl) {
@@ -16,7 +18,7 @@ function Card({ path, label, image, text, width, isUrl, tagColor }) {
             <li className='card-container' style={{ width: width }}>
                 <a className='cards__item__link' href={path}>
                     <div
-                        id='card-tag'
+                        id={'card-' + tagColor}
                         className='cards__item__pic-wrap'
                         style={{ backgroundColor: '#fff' }}
                         data-category={label}
@@ -34,7 +36,7 @@ function Card({ path, label, image, text, width, isUrl, tagColor }) {
             <li className='card-container' style={{ width: width }}>
                 <Link className='cards__item__link' to={path}>
                     <div
-                        id='card-tag'
+                        id={'card-' + tagColor}
                         className='cards__item__pic-wrap'
                         style={{ backgroundColor: '#fff' }}
                         data-category={label}

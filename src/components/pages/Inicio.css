@@ -8,4 +8,10 @@
     .card-container {
         width: auto !important;
     }
+    .cards-container > .card-container:last-child {
+        margin-top: 0;
+    }
+    .cards-container > .card-container:first-child {
+        margin-bottom: 0;
+    }
 }

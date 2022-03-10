@@ -22,29 +22,26 @@ function Inicio() {
                 <div className='cards-container'>
                     <Card
                         isUrl
-                        tagColor='#ff2828'
-                        width='30%'
-                        label='New'
+                        width='30vw'
+                        label='⭐ New'
                         path='https://neonx.page.link/discord'
                         text='Nuevo servidor de discord de NeonX (GTA V)'
                         image='https://i.blogs.es/760434/discordportada/1366_2000.jpeg'
                     />
                     <Card
-                        isUrl
-                        tagColor='blue'
-                        width='30%'
-                        label='Hot'
-                        path='https://google.com'
-                        text='Nuevo servidor de discord de NeonX (GTA V)'
-                        image='https://larepublica.pe/resizer/xr757tkwMqyNRTMX1tdsiOQ2pZU=/1200x660/top/cloudfront-us-east-1.images.arcpublishing.com/gruporepublica/3SXXEFW7IVG5JF4H7WSA3ZYEVE.png'
+                        tagColor='#ff2828'
+                        width='30vw'
+                        label='🔥 Hot'
+                        path='/news'
+                        text='La salida de NeonX GTA V se retrasa'
+                        image='https://im2.ezgif.com/tmp/ezgif-2-45f2bd4e90-png-split/ezgif-frame-066.png' // {require('../../images/NeonX.gif')}
                     />
                     <Card
                         isUrl
-                        tagColor='#ff2828'
-                        width='30%'
-                        label='New'
+                        width='30vw'
+                        label='⭐ New'
                         path='https://google.com'
-                        text='Nuevo servidor de discord de NeonX (GTA V)'
+                        text='No se qué poner aquí'
                         image='https://larepublica.pe/resizer/xr757tkwMqyNRTMX1tdsiOQ2pZU=/1200x660/top/cloudfront-us-east-1.images.arcpublishing.com/gruporepublica/3SXXEFW7IVG5JF4H7WSA3ZYEVE.png'
                     />
                 </div>
