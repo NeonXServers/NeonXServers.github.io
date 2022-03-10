@@ -35,6 +35,11 @@ function Navbar() {
         document.body.style.overflowY = 'overlay';
         closeDropdowns();
     };
+    const closeMobileMenuOnResize = () => {
+        if (window.innerWidth > 960) {
+            closeMobileMenu();
+        }
+    };
 
     const showButton = () => {
         if (window.innerWidth <= 960) {
@@ -45,12 +50,16 @@ function Navbar() {
     };
 
     useEffect(() => {
+        closeMobileMenuOnResize();
         showButton();
     }, []);
     const gtav = useRef();
     const contacto = useRef();
 
-    window.addEventListener('resize', showButton);
+    window.addEventListener('resize', function () {
+        showButton();
+        closeMobileMenuOnResize();
+    });
 
     return (
         <>

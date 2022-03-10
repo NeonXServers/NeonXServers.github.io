@@ -278,6 +278,7 @@
         width: 40%;
         margin: 0;
         margin-left: 50%;
+        white-space: nowrap;
         transform: translateX(-50%);
     }
     .dropdown-button {

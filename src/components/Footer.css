@@ -95,11 +95,14 @@
     display: flex;
 }
 .footer-link p {
-    margin-left: 10%;
+    margin-left: 1vw;
 }
 @media screen and (max-width: 800px) {
     .footer-link-items {
         flex-direction: column;
+    }
+    .footer-link p {
+        margin-left: 1.5vw;
     }
 }
 
