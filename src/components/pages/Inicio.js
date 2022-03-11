@@ -6,7 +6,7 @@ import './Inicio.css';
 import { Heading } from '../Heading';
 
 function Inicio() {
-    return (
+     return (
         <>
             <Heading
                 img={

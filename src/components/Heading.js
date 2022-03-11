@@ -13,13 +13,15 @@ export const Heading = ({
     btnIsUrl1,
     btnStyle1,
     btnSize1,
+    btnOnClick1,
     btnTxt2,
     btnTo2,
     btnIsUrl2,
     btnStyle2,
     btnSize2,
+    btnOnClick2
 }) => {
-    var btns = () => {};
+    var btns = () => { };
     switch (buttons) {
         case '1':
             btns = () => {
@@ -30,6 +32,7 @@ export const Heading = ({
                         buttonSize={btnSize1 ? btnSize1 : 'btn--large'}
                         to={btnTo1 ? btnTo1 : '/'}
                         isUrl={btnIsUrl1}
+                        onClick={btnOnClick1}
                     >
                         {btnTxt1}
                     </Button>
@@ -47,6 +50,7 @@ export const Heading = ({
                             buttonSize={btnSize1 ? btnSize1 : 'btn--large'}
                             to={btnTo1 ? btnTo1 : '/'}
                             isUrl={btnIsUrl1}
+                            onClick={btnOnClick1}
                         >
                             {btnTxt1}
                         </Button>
@@ -56,6 +60,7 @@ export const Heading = ({
                             buttonSize={btnSize2 ? btnSize2 : 'btn--large'}
                             to={btnTo2 ? btnTo2 : '/'}
                             isUrl={btnIsUrl2}
+                            onClick={btnOnClick2}
                         >
                             {btnTxt2}
                         </Button>
