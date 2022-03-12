@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './Card.css';
 import { Link } from 'react-router-dom';
 
-function Card({ path, label, image, text, width, isUrl, tagColor }) {
+function Card({ path, label, image, children, width, isUrl, tagColor }) {
     width = width ? width : 'auto';
     if (!tagColor) {
         tagColor = '#0095ff';
@@ -30,7 +30,7 @@ function Card({ path, label, image, text, width, isUrl, tagColor }) {
                         <img className='cards__item__img' alt='' src={image} />
                     </div>
                     <div className='cards__item__info'>
-                        <h5 className='cards__item__text'>{text}</h5>
+                        <h5 className='cards__item__text'>{children}</h5>
                     </div>
                 </a>
             </li>
@@ -48,7 +48,7 @@ function Card({ path, label, image, text, width, isUrl, tagColor }) {
                         <img className='cards__item__img' alt='' src={image} />
                     </div>
                     <div className='cards__item__info'>
-                        <h5 className='cards__item__text'>{text}</h5>
+                        <h5 className='cards__item__text'>{children}</h5>
                     </div>
                 </Link>
             </li>

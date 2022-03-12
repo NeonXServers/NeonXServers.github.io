@@ -4,9 +4,20 @@ import Footer from '../Footer.js';
 import Card from '../Card.js';
 import './Inicio.css';
 import { Heading } from '../Heading';
+import { Button } from '../Button';
 
 function Inicio() {
-     return (
+    let btns = () => {
+        return (
+            <>
+                <Button buttonStyle='btn--outline' buttonSize={'btn--large'}>
+                    Botón 1
+                </Button>
+                <Button buttonSize={'btn--large'}>Botón 2</Button>
+            </>
+        );
+    };
+    return (
         <>
             <Heading
                 img={
@@ -14,9 +25,7 @@ function Inicio() {
                 }
                 title='NeonX'
                 subtitle='El slogan de NeonX'
-                btnTxt1='Botón 1'
-                btnTxt2='Botón 2'
-                buttons='2'
+                buttons={btns()}
             />
             <div className='container'>
                 <div className='cards-container'>
@@ -25,7 +34,7 @@ function Inicio() {
                         width='30vw'
                         label='⭐ New'
                         path='https://neonx.page.link/discord'
-                        text='Nuevo servidor de discord de NeonX (GTA V)'
+                        children='Nuevo servidor de discord de NeonX (GTA V)'
                         image='https://i.blogs.es/760434/discordportada/1366_2000.jpeg'
                     />
                     <Card
@@ -33,15 +42,15 @@ function Inicio() {
                         width='30vw'
                         label='🔥 Hot'
                         path='/news'
-                        text='La salida de NeonX GTA V se retrasa'
-                        image={require('../../images/NeonXLogo.png')}
+                        children='La salida de NeonX GTA V se retrasa'
+                        image='https://media.discordapp.net/attachments/894645474513014914/952254026001563679/unknown.png'
                     />
                     <Card
                         isUrl
                         width='30vw'
                         label='⭐ New'
                         path='https://google.com'
-                        text='No se qué poner aquí'
+                        children='Evento Sorpresa'
                         image='https://larepublica.pe/resizer/xr757tkwMqyNRTMX1tdsiOQ2pZU=/1200x660/top/cloudfront-us-east-1.images.arcpublishing.com/gruporepublica/3SXXEFW7IVG5JF4H7WSA3ZYEVE.png'
                     />
                 </div>
