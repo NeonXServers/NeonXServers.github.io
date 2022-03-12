@@ -2,7 +2,7 @@ import React from 'react';
 import '../../../App.css';
 import './Inicio.css';
 import Footer from '../../Footer';
-import { Heading } from '../../Heading';
+import Heading from '../../Heading';
 
 function GTAV() {
     return (

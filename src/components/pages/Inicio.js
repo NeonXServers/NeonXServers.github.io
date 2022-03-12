@@ -3,8 +3,8 @@ import '../../App.css';
 import Footer from '../Footer.js';
 import Card from '../Card.js';
 import './Inicio.css';
-import { Heading } from '../Heading';
-import { Button } from '../Button';
+import Heading from '../Heading';
+import Button from '../Button';
 
 function Inicio() {
     let btns = () => {

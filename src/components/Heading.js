@@ -2,7 +2,8 @@ import React from 'react';
 import '../App.css';
 import './Heading.css';
 
-export const Heading = ({ title, subtitle, img, buttons }) => {
+var Heading;
+export default Heading = ({ title, subtitle, img, buttons }) => {
     const background = img
         ? `url('${img}') center center/cover no-repeat`
         : `none`;

@@ -1,4 +1,5 @@
 import React from 'react';
+import './Commands';
 import './App.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -20,7 +21,15 @@ function App() {
     function showCoverBar() {
         document.body.classList.remove('scrolling');
     }
-
+    function showEE() {
+        if (
+            global.NeonX.getEasterEgg &&
+            window.location.pathname.toLowerCase() == '/ovecob'
+        ) {
+            console.log('Esto es un Easter Egg :)');
+        }
+    }
+    document.addEventListener('scroll', showEE);
     return (
         <>
             <Router>
@@ -30,7 +39,7 @@ function App() {
                     <Route path='/' exact element={<Inicio />} />
                     <Route path='/gtav' element={<GTAV />} />
                     <Route path='/gtav/patch-notes' element={<GTAParches />} />
-                    <Route path="*" element={<Err404 />} />
+                    <Route path='*' element={<Err404 />} />
                 </Routes>
             </Router>
         </>
