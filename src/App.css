@@ -9,6 +9,9 @@ body {
     overflow-y: overlay;
     overflow-x: hidden;
 }
+#root {
+    overflow-x: hidden;
+}
 
 * {
     box-sizing: border-box;
