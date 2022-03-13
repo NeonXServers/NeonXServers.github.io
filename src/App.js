@@ -24,7 +24,7 @@ function App() {
     function showEE() {
         if (
             global.NeonX.getEasterEgg &&
-            window.location.pathname.toLowerCase() == '/ovecob'
+            window.location.pathname.toLowerCase() === '/ovecob'
         ) {
             console.log('Esto es un Easter Egg :)');
         }

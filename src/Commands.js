@@ -15,6 +15,8 @@ global.NeonX = {
                     },
                 };
                 break;
+            default:
+                break;
         }
     },
 };
