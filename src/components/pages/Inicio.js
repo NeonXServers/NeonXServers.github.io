@@ -7,8 +7,7 @@ import Heading from '../Heading';
 import Button from '../Button';
 
 function Inicio() {
-    let btns = () => {
-        return (
+    let btns = (
             <>
                 <Button buttonStyle='btn--outline' buttonSize={'btn--large'}>
                     Botón 1
@@ -16,7 +15,6 @@ function Inicio() {
                 <Button buttonSize={'btn--large'}>Botón 2</Button>
             </>
         );
-    };
     return (
         <>
             <Heading
@@ -25,7 +23,7 @@ function Inicio() {
                 }
                 title='NeonX'
                 subtitle='El slogan de NeonX'
-                buttons={btns()}
+                buttons={btns}
             />
             <div className='container'>
                 <div className='cards-container'>
