@@ -53,3 +53,10 @@ body::-webkit-scrollbar-thumb:active {
     background-color: #7272729d;
     box-shadow: none;
 }
+.container{
+    margin-top: 3vh;
+    flex-direction: column;
+    color: white;
+    display: flex;
+    justify-content: center;
+}

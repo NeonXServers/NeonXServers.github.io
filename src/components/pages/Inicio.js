@@ -8,13 +8,13 @@ import Button from '../Button';
 
 function Inicio() {
     let btns = (
-            <>
-                <Button buttonStyle='btn--outline' buttonSize={'btn--large'}>
-                    Botón 1
-                </Button>
-                <Button buttonSize={'btn--large'}>Botón 2</Button>
-            </>
-        );
+        <>
+            <Button buttonStyle='btn--outline' buttonSize={'btn--large'}>
+                Botón 1
+            </Button>
+            <Button buttonSize={'btn--large'}>Botón 2</Button>
+        </>
+    );
     return (
         <>
             <Heading
@@ -26,7 +26,7 @@ function Inicio() {
                 buttons={btns}
             />
             <div className='container'>
-                <div className='cards-container'>
+                <div className='cards-container section'>
                     <Card
                         isUrl
                         width='30vw'
@@ -47,10 +47,18 @@ function Inicio() {
                         isUrl
                         width='30vw'
                         label='⭐ New'
-                        path='https://google.com'
-                        children='Evento Sorpresa'
-                        image='https://larepublica.pe/resizer/xr757tkwMqyNRTMX1tdsiOQ2pZU=/1200x660/top/cloudfront-us-east-1.images.arcpublishing.com/gruporepublica/3SXXEFW7IVG5JF4H7WSA3ZYEVE.png'
+                        path='https://twitter.com/search?q=%23StopTheWar&src=typeahead_click&f=top'
+                        children='#StopTheWar'
+                        image='https://ak.picdn.net/shutterstock/videos/20242933/thumb/12.jpg'
                     />
+                </div>
+                <div className="whois section">
+                    <h1 className="whoistitle">¿Qué es NeonX?</h1>
+                    <p className="whoistxt">NeonX es un proyecto creado por unos chavales de 1º de Grado Superior de Desarrollo de Aplicaciones Web
+                        con la finalidad de aprender con un método autodidacta y externo a las clases impartidas en un centro. <br />
+                        Por el momento está en desarrollo el servidor del juego GTA V, pero hay planes para crear nuevos proyectos en un futuro próximo. <br />
+                        ¿Estás interesado en nuestras futuras ideas y quieres ayudar? ¡Apoyanos con una donación!</p>
+                    <Button>Donar</Button>
                 </div>
             </div>
             <Footer />
