@@ -172,22 +172,23 @@ function Navbar() {
                             </ul>
                         </li>
                         <div className='nav-item'>
-                            <Link
-                                to='/'
+                            <a
+                                href='https://discord.com/api/oauth2/authorize?client_id=940266552106835968&redirect_uri=http%3A%2F%2Fneonx.sytes.net&response_type=code&scope=email%20identify%20guilds'
                                 className='nav-links-mobile'
                                 onClick={closeMobileMenu}
                             >
-                                Cualquier Vaina
-                            </Link>
+                                Iniciar Sesión
+                            </a>
                         </div>
                     </ul>
                     {button && (
                         <Button
-                            to={'/'}
+                            isUrl
+                            to={'https://discord.com/api/oauth2/authorize?client_id=940266552106835968&redirect_uri=http%3A%2F%2Fneonx.sytes.net&response_type=code&scope=email%20identify%20guilds'}
                             buttonSize={'btn--large'}
                             buttonStyle={'btn--outline'}
                         >
-                            Cualquier Vaina
+                            Iniciar Sesión
                         </Button>
                     )}
                 </div>

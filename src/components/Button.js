@@ -21,21 +21,35 @@ export default Button = ({
 
     const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
-    if (isUrl) {
-        return (
-            <a href={to ? to : 'https://google.com'} className='btn-mobile'>
-                <button
-                    className={`btn ${checkButtonStyle} ${checkButtonSize}`}
-                    type={type}
-                    onClick={onClick}
-                >
-                    {children}
-                </button>
-            </a>
-        );
+    if (to) {
+        if (isUrl) {
+            return (
+                <a href={to ? to : 'https://google.com'} className='btn-mobile'>
+                    <button
+                        className={`btn ${checkButtonStyle} ${checkButtonSize}`}
+                        type={type}
+                        onClick={onClick}
+                    >
+                        {children}
+                    </button>
+                </a>
+            );
+        } else {
+            return (
+                <Link to={to ? to : '/'} className='btn-mobile'>
+                    <button
+                        className={`btn ${checkButtonStyle} ${checkButtonSize}`}
+                        type={type}
+                        onClick={onClick}
+                    >
+                        {children}
+                    </button>
+                </Link>
+            );
+        }
     } else {
         return (
-            <Link to={to ? to : '/'} className='btn-mobile'>
+            <div className='btn-mobile'>
                 <button
                     className={`btn ${checkButtonStyle} ${checkButtonSize}`}
                     type={type}
@@ -43,7 +57,7 @@ export default Button = ({
                 >
                     {children}
                 </button>
-            </Link>
+            </div>
         );
     }
 };

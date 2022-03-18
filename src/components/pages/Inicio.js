@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import '../../App.css';
 import Footer from '../Footer.js';
 import Card from '../Card.js';
 import './Inicio.css';
 import Heading from '../Heading';
 import Button from '../Button';
-
+const scrollToRef = (ref) => {
+    let pos = ref.current.offsetTop - 80
+    window.scrollTo(0, pos)
+}
 function Inicio() {
+    const whois = useRef(null)
+    const executeScroll = () => {
+        scrollToRef(whois)
+    }
+
     let btns = (
         <>
-            <Button buttonStyle='btn--outline' buttonSize={'btn--large'}>
-                Botón 1
+            <Button buttonStyle='btn--outline' buttonSize={'btn--large'} onClick={executeScroll}  >
+                Más Info
             </Button>
-            <Button buttonSize={'btn--large'}>Botón 2</Button>
+            <Button buttonSize={'btn--large'} to="gtav">Ver GTA V</Button>
         </>
     );
     return (
@@ -26,7 +34,7 @@ function Inicio() {
                 buttons={btns}
             />
             <div className='container'>
-                <div className='whois section'>
+                <div className='whois section' ref={whois}>
                     <img
                         className='whoisimg'
                         src={require('../../images/NeonXLogoPanorámico.png')}

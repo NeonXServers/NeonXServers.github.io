@@ -28,6 +28,7 @@
 
 .heading-btns {
     margin-top: 5vh;
+    display: flex;
 }
 
 .heading-btns .btn {
@@ -52,5 +53,9 @@
     .btn-mobile {
         display: block;
         text-decoration: none;
+    }
+    .heading-btns {
+        margin-top: 5vh;
+        display: block;
     }
 }
