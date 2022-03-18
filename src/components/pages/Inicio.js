@@ -26,6 +26,31 @@ function Inicio() {
                 buttons={btns}
             />
             <div className='container'>
+                <div className='whois section'>
+                    <img
+                        className='whoisimg'
+                        src={require('../../images/NeonXLogoPanorámico.png')}
+                        alt=''
+                    />
+                    <div className='whoischilds'>
+                        <h1 className='whoistitle'>¿Qué es NeonX?</h1>
+                        <p className='whoistxt'>
+                            NeonX es un proyecto creado por unos chavales de 1º
+                            de Grado Superior de Desarrollo de Aplicaciones Web
+                            con la finalidad de aprender con un método
+                            autodidacta y externo a las clases impartidas en un
+                            centro. <br />
+                            <br />
+                            Por el momento está en desarrollo el servidor del
+                            juego GTA V, pero hay planes para crear nuevos
+                            proyectos en un futuro próximo. <br />
+                            <br />
+                            ¿Estás interesado en nuestras futuras ideas y
+                            quieres ayudar? ¡Apoyanos con una donación!
+                        </p>
+                        <Button>Donar</Button>
+                    </div>
+                </div>
                 <div className='cards-container section'>
                     <Card
                         isUrl
@@ -51,14 +76,6 @@ function Inicio() {
                         children='#StopTheWar'
                         image='https://ak.picdn.net/shutterstock/videos/20242933/thumb/12.jpg'
                     />
-                </div>
-                <div className="whois section">
-                    <h1 className="whoistitle">¿Qué es NeonX?</h1>
-                    <p className="whoistxt">NeonX es un proyecto creado por unos chavales de 1º de Grado Superior de Desarrollo de Aplicaciones Web
-                        con la finalidad de aprender con un método autodidacta y externo a las clases impartidas en un centro. <br />
-                        Por el momento está en desarrollo el servidor del juego GTA V, pero hay planes para crear nuevos proyectos en un futuro próximo. <br />
-                        ¿Estás interesado en nuestras futuras ideas y quieres ayudar? ¡Apoyanos con una donación!</p>
-                    <Button>Donar</Button>
                 </div>
             </div>
             <Footer />
