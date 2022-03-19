@@ -45,6 +45,12 @@
     .cards-container > .card-container:first-child {
         margin-bottom: 0;
     }
+    .whoistxt {
+        font-size: 17px;
+    }
+    .whoistitle {
+        font-size: 40px;
+    }
 }
 @media screen and (max-width: 960px) {
     .whois {
@@ -53,5 +59,8 @@
     .whoisimg {
         margin-bottom: 4vh;
         width: 45%;
+    }
+    .whoischilds {
+        width: 80%;
     }
 }

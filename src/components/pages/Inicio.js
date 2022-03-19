@@ -5,22 +5,32 @@ import Card from '../Card.js';
 import './Inicio.css';
 import Heading from '../Heading';
 import Button from '../Button';
-const scrollToRef = (ref) => {
-    let pos = ref.current.offsetTop - 80
-    window.scrollTo(0, pos)
-}
+import { animateScroll as scroll } from 'react-scroll';
+const scrollToSection = (ref) => {
+    scroll.scrollTo(ref.current.offsetTop - 80, {
+        duration: 800,
+        delay: 0,
+        smooth: 'easeInOutQuart',
+    });
+};
 function Inicio() {
-    const whois = useRef(null)
+    const whois = useRef(null);
     const executeScroll = () => {
-        scrollToRef(whois)
-    }
+        scrollToSection(whois);
+    };
 
     let btns = (
         <>
-            <Button buttonStyle='btn--outline' buttonSize={'btn--large'} onClick={executeScroll}  >
+            <Button
+                buttonStyle='btn--outline'
+                buttonSize={'btn--large'}
+                onClick={executeScroll}
+            >
                 Más Info
             </Button>
-            <Button buttonSize={'btn--large'} to="gtav">Ver GTA V</Button>
+            <Button buttonSize={'btn--large'} to='gtav'>
+                Ver GTA V
+            </Button>
         </>
     );
     return (
