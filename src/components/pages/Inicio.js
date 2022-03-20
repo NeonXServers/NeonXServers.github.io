@@ -40,7 +40,7 @@ function Inicio() {
                     'https://img.freepik.com/foto-gratis/fondo-pared-ladrillo-luz-neon_117255-1838.jpg?w=900'
                 }
                 title='NeonX'
-                subtitle='El slogan de NeonX'
+                subtitle="Future's neon fate"
                 buttons={btns}
             />
             <div className='container'>
