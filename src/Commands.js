@@ -1,18 +1,13 @@
 global.NeonX = {
-    getDiscord() {
-        return 'https://neonx.page.link/discord';
-    },
-    getShop() {
-        return 'https://neonx.tebex.io/';
-    },
-    settings(x) {
+    Discord: 'https://neonx.page.link/discord',
+    Shop: 'https://neonx.tebex.io/',
+    Owners: 'Toskan4134 & Ninjam',
+    Settings(x) {
         switch (x) {
             case 'unlockCommands':
                 global.NeonX = {
                     ...global.NeonX,
-                    getEasterEgg() {
-                        return 'nOt eVEn ClOse baBy';
-                    },
+                    EasterEgg: 'nOt eVEn ClOse baBy',
                 };
                 break;
             default:
