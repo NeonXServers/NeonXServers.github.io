@@ -1,0 +1,76 @@
+.patch-card-container {
+    display: flex;
+    flex: 1;
+    margin: 2rem 1rem;
+    border-radius: 10px;
+}
+
+.patch-cards__item__link {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    box-shadow: 0px 0px 3vmin -1vmin #000;
+    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: box-shadow 0.2s ease-out;
+}
+
+.patch-cards__item__link:hover {
+    box-shadow: 0px 0px 3vmin -1vmin #0095ff;
+}
+.patch-cards__item__link:active {
+    box-shadow: 0px 0px 3vmin -1vmin #ff00ff;
+}
+
+.patch-cards__item__pic-wrap {
+    --background-color: #0095ff;
+    --background-opacity-color: #0095ff33;
+    position: relative;
+    width: 100%;
+    padding-top: 67%;
+    overflow: hidden;
+}
+
+.patch-cards__item__pic-wrap::after {
+    box-shadow: 0px 0px 1vmin var(--background-color);
+    text-shadow: 1.25px 0 0 #fff, -1.25px 0 0 #fff, 0 1.25px 0 #fff,
+        0 -1.25px 0 #fff, 1px 0.5px #fff, -1px -0.5px 0 #fff, 1px -0.5px 0 #fff,
+        -1px 0.5px 0 #fff, 0.5px 0.1px #fff, -0.5px -1px 0 #fff,
+        0.5px -1px 0 #fff, -0.5px 1px 0 #fff, 0.5px 1px 0 #fff; /* .25px 1px 0 #fff, .75px 1px 0 #fff, -.25px 1px 0 #fff, -.75px 1px 0 #fff, .25px -1px 0 #fff, .75px -1px 0 #fff, -.25px -1px 0 #fff, -.75px -1px 0 #fff, 1px .25px 0 #fff,  1px .75px 0 #fff,  1px -.25px 0 #fff,  1px -.75px 0 #fff,  -1px -.25px 0 #fff,  -1px -.75px 0 #fff;*/
+    content: attr(data-category);
+    color: var(--background-color) !important;
+    border: 3px solid var(--background-color);
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 6px 8px;
+    max-width: calc((100%) - 60px);
+    font-size: 12px;
+    font-weight: 700;
+    background-color: var(--background-opacity-color);
+    box-sizing: border-box;
+}
+
+.patch-cards__item__img:hover {
+    transform: scale(1.1);
+}
+
+.patch-cards__item__info {
+    padding: 20px 30px 30px;
+    background-color: #23272a;
+    height: 100%;
+}
+
+.patch-cards__item__text {
+    color: white;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+        'Lucida Sans', Arial, sans-serif;
+}

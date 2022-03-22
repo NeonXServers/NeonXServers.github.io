@@ -1,4 +1,4 @@
-.cards-container {
+.cards-container-inicio {
     display: flex;
 }
 .section {
@@ -33,16 +33,16 @@
     border-radius: 10px;
 }
 @media screen and (max-width: 750px) {
-    .cards-container {
+    .cards-container-inicio {
         flex-direction: column;
     }
     .card-container {
         width: auto !important;
     }
-    .cards-container > .card-container:last-child {
+    .cards-container-inicio > .card-container:last-child {
         margin-top: 0;
     }
-    .cards-container > .card-container:first-child {
+    .cards-container-inicio > .card-container:first-child {
         margin-bottom: 0;
     }
     .whoistxt {

@@ -69,7 +69,7 @@ function Inicio() {
                         <Button>Donar</Button>
                     </div>
                 </div>
-                <div className='cards-container section'>
+                <div className='cards-container-inicio section'>
                     <Card
                         isUrl
                         width='30vw'
