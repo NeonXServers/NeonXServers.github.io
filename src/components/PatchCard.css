@@ -3,6 +3,7 @@
     flex: 1;
     margin: 2rem 1rem;
     border-radius: 10px;
+    flex-direction: column;
 }
 
 .patch-cards__item__link {
@@ -25,16 +26,16 @@
     box-shadow: 0px 0px 3vmin -1vmin #ff00ff;
 }
 
-.patch-cards__item__pic-wrap {
+.patch-cards__item__title {
     --background-color: #0095ff;
     --background-opacity-color: #0095ff33;
+    background-color: #23272a;
     position: relative;
+    padding: 1rem;
     width: 100%;
-    padding-top: 67%;
-    overflow: hidden;
 }
 
-.patch-cards__item__pic-wrap::after {
+.patch-cards__item__title::after {
     box-shadow: 0px 0px 1vmin var(--background-color);
     text-shadow: 1.25px 0 0 #fff, -1.25px 0 0 #fff, 0 1.25px 0 #fff,
         0 -1.25px 0 #fff, 1px 0.5px #fff, -1px -0.5px 0 #fff, 1px -0.5px 0 #fff,
@@ -48,29 +49,40 @@
     top: 0;
     right: 0;
     margin-right: 10px;
-    margin-top: 10px;
+    margin-top: 1rem;
     padding: 6px 8px;
     max-width: calc((100%) - 60px);
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 700;
     background-color: var(--background-opacity-color);
     box-sizing: border-box;
 }
-
+.patch-cards__item__title h2{
+    font-size: 27px;
+}
 .patch-cards__item__img:hover {
     transform: scale(1.1);
 }
 
 .patch-cards__item__info {
-    padding: 20px 30px 30px;
-    background-color: #23272a;
+    padding: 20px 30px;
+    background-color: #383e42;
     height: 100%;
 }
 
-.patch-cards__item__text {
+.patch-cards__item__text  li{
     color: white;
-    font-size: 18px;
+    list-style-type: none;
     line-height: 24px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
         'Lucida Sans', Arial, sans-serif;
+}
+.patch-cards-sub-li{
+    font-size: 18px;
+    margin: 5px 0 5px 1rem;
+
+}
+.patch-cards-li{
+    margin: 5px 0 10px;
+    font-size: 22px;
 }

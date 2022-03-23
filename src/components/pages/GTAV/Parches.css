@@ -1,4 +1,7 @@
 .title{
     margin-top: 20px;
 }
-
+.patch-cards-container-patch{
+    display: flex;
+    flex-direction: row;
+}

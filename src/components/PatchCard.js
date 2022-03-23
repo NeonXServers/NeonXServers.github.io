@@ -17,19 +17,18 @@ function PatchCard({ title, label, tagColor, children, width }) {
     }, []);
 
     return (
-        <li className='patch-card-container' style={{ width: width }}>
+        <div className='patch-card-container' style={{ width: width }}>
             <div
                 id={'patch-card-' + tagColor}
-                className='patch-cards__item__pic-wrap'
-                style={{ backgroundColor: '#fff' }}
+                className='patch-cards__item__title'
                 data-category={label}
             >
                 <h2>{title}</h2>
             </div>
             <div className='patch-cards__item__info'>
-                <h5 className='patch-cards__item__text'>{children}</h5>
+                <p className='patch-cards__item__text'>{children}</p>
             </div>
-        </li>
+        </div>
     );
 
 }
