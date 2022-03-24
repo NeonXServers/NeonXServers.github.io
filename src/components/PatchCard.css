@@ -2,28 +2,15 @@
     display: flex;
     flex: 1;
     margin: 2rem 1rem;
-    border-radius: 10px;
     flex-direction: column;
-}
-
-.patch-cards__item__link {
-    display: flex;
-    flex-flow: column;
-    width: 100%;
-    box-shadow: 0px 0px 3vmin -1vmin #000;
-    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     border-radius: 10px;
-    overflow: hidden;
-    text-decoration: none;
-    transition: box-shadow 0.2s ease-out;
+    min-width: 31vw;
+    max-width: 31vw;
+    height: 500px;
 }
 
-.patch-cards__item__link:hover {
+.patch-card-container:hover {
     box-shadow: 0px 0px 3vmin -1vmin #0095ff;
-}
-.patch-cards__item__link:active {
-    box-shadow: 0px 0px 3vmin -1vmin #ff00ff;
 }
 
 .patch-cards__item__title {
@@ -33,56 +20,107 @@
     position: relative;
     padding: 1rem;
     width: 100%;
+    border-radius: 10px 10px 0 0;
 }
-
-.patch-cards__item__title::after {
+.patch-card-tag {
     box-shadow: 0px 0px 1vmin var(--background-color);
     text-shadow: 1.25px 0 0 #fff, -1.25px 0 0 #fff, 0 1.25px 0 #fff,
         0 -1.25px 0 #fff, 1px 0.5px #fff, -1px -0.5px 0 #fff, 1px -0.5px 0 #fff,
         -1px 0.5px 0 #fff, 0.5px 0.1px #fff, -0.5px -1px 0 #fff,
         0.5px -1px 0 #fff, -0.5px 1px 0 #fff, 0.5px 1px 0 #fff; /* .25px 1px 0 #fff, .75px 1px 0 #fff, -.25px 1px 0 #fff, -.75px 1px 0 #fff, .25px -1px 0 #fff, .75px -1px 0 #fff, -.25px -1px 0 #fff, -.75px -1px 0 #fff, 1px .25px 0 #fff,  1px .75px 0 #fff,  1px -.25px 0 #fff,  1px -.75px 0 #fff,  -1px -.25px 0 #fff,  -1px -.75px 0 #fff;*/
     content: attr(data-category);
-    color: var(--background-color) !important;
+    color: var(--background-color);
     border: 3px solid var(--background-color);
     border-radius: 50px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-right: 10px;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     padding: 6px 8px;
-    max-width: calc((100%) - 60px);
-    font-size: 10px;
+    font-size: 12px;
+    width: min-content;
+    white-space: nowrap;
     font-weight: 700;
     background-color: var(--background-opacity-color);
     box-sizing: border-box;
 }
-.patch-cards__item__title h2{
+.patch-cards__item__title h2 {
     font-size: 27px;
 }
-.patch-cards__item__img:hover {
-    transform: scale(1.1);
-}
-
-.patch-cards__item__info {
+.patch-cards__item__text {
+    border-radius: 0 0 10px 10px;
+    height: 100%;
     padding: 20px 30px;
     background-color: #383e42;
-    height: 100%;
+    overflow-y: scroll;
 }
-
-.patch-cards__item__text  li{
+.patch-card-tags-container {
+    display: flex;
+}
+.patch-cards__item__text p {
     color: white;
     list-style-type: none;
     line-height: 24px;
+    font-size: 16px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
         'Lucida Sans', Arial, sans-serif;
 }
-.patch-cards-sub-li{
-    font-size: 18px;
-    margin: 5px 0 5px 1rem;
-
+.patch-cards__item__text::-webkit-scrollbar {
+    display: block;
+    width: 7px;
+    z-index: 0;
 }
-.patch-cards-li{
-    margin: 5px 0 10px;
-    font-size: 22px;
+
+.patch-cards__item__text::-webkit-scrollbar-button {
+    display: none;
+}
+
+.patch-cards__item__text::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.patch-cards__item__text::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+}
+.patch-cards__item__text::-webkit-scrollbar-thumb {
+    background-color: #a7a1a19d;
+    border: 5px solid transparent;
+    border-radius: 24px;
+}
+.patch-cards__item__text.scrolling::-webkit-scrollbar-thumb {
+    background-color: #a7a1a19d;
+    border: 5px solid transparent;
+    border-radius: 24px;
+}
+.patch-cards__item__text::-webkit-scrollbar-thumb:active {
+    background-color: #7272729d;
+    box-shadow: none;
+}
+
+@media screen and (max-width: 475px) {
+    .patch-card-container {
+        min-width: 300px;
+        max-width: 300px;
+    }
+}
+@media screen and (max-width: 1476px) {
+    .patch-card-container {
+        min-width: 40vw;
+        max-width: 40vw;
+    }
+}
+@media screen and (max-width: 780px) {
+    .patch-card-container {
+        min-width: 75vw;
+        max-width: 75vw;
+    }
+}
+@media screen and (max-width: 435px) {
+    .patch-card-container {
+        min-width: 90vw;
+        max-width: 90vw;
+    }
+}
+@media screen and (max-width: 325px) {
+    .patch-card-container {
+        min-width: 290px;
+        max-width: 90vw;
+    }
 }

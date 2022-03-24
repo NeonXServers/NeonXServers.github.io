@@ -1,7 +1,7 @@
 global.NeonX = {
     Discord: 'https://neonx.page.link/discord',
     Shop: 'https://neonx.tebex.io/',
-    Owners: 'Toskan4134 & Ninjam',
+    Owners: 'Ninjam & Toskan4134',
     Settings(x) {
         switch (x) {
             case 'unlockCommands':

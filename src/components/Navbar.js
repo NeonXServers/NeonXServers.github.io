@@ -117,18 +117,10 @@ function Navbar() {
                                 <li className='dropdown-item'>
                                     <Link
                                         className='dropdown-links'
-                                        to='/gtav'
-                                        onClick={closeMobileMenu}
-                                    >
-                                        Inicio
-                                    </Link>
-                                </li>
-                                <li className='dropdown-item'>
-                                    <Link
-                                        className='dropdown-links'
                                         to='/gtav/patch-notes'
                                         onClick={closeMobileMenu}
                                     >
+                                        <i className='bi bi-journal-code'></i>{' '}
                                         Parches
                                     </Link>
                                 </li>
@@ -138,7 +130,7 @@ function Navbar() {
                                         href='https://neonx.tebex.io/'
                                         onClick={closeMobileMenu}
                                     >
-                                        Tienda
+                                        <i className='bi bi-cart3'></i> Tienda
                                     </a>
                                 </li>
                             </ul>
@@ -166,7 +158,7 @@ function Navbar() {
                                         className='dropdown-links'
                                         onClick={closeMobileMenu}
                                     >
-                                        Discord
+                                        <i className='bi-discord' /> Discord
                                     </a>
                                 </li>
                             </ul>
@@ -184,7 +176,9 @@ function Navbar() {
                     {button && (
                         <Button
                             isUrl
-                            to={'https://discord.com/api/oauth2/authorize?client_id=940266552106835968&redirect_uri=http%3A%2F%2Fneonx.sytes.net&response_type=code&scope=email%20identify%20guilds'}
+                            to={
+                                'https://discord.com/api/oauth2/authorize?client_id=940266552106835968&redirect_uri=http%3A%2F%2Fneonx.sytes.net&response_type=code&scope=email%20identify%20guilds'
+                            }
                             buttonSize={'btn--large'}
                             buttonStyle={'btn--outline'}
                         >

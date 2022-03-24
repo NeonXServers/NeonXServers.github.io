@@ -1,7 +1,21 @@
-.title{
+.parches-title {
     margin-top: 20px;
+    font-size: 50px;
 }
-.patch-cards-container-patch{
+.patch-cards-container-patch {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 0.5vw;
+}
+
+@media screen and (max-width: 1200px) {
+    .patch-cards__item__title h2 {
+        font-size: 23px;
+    }
+}
+@media screen and (max-width: 1476px) {
+    .patch-cards-container-patch {
+        justify-content: space-around;
+    }
 }
