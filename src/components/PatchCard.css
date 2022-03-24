@@ -102,14 +102,14 @@
 }
 @media screen and (max-width: 1476px) {
     .patch-card-container {
-        min-width: 40vw;
-        max-width: 40vw;
+        min-width: 45vw;
+        max-width: 45vw;
     }
 }
 @media screen and (max-width: 780px) {
     .patch-card-container {
-        min-width: 75vw;
-        max-width: 75vw;
+        min-width: 85vw;
+        max-width: 85vw;
     }
 }
 @media screen and (max-width: 435px) {
@@ -121,6 +121,5 @@
 @media screen and (max-width: 325px) {
     .patch-card-container {
         min-width: 290px;
-        max-width: 90vw;
     }
 }
