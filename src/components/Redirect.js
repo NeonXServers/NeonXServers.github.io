@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
-let Redirect;
-export default Redirect = ({ url }) => {
+export default function Redirect({ url }) {
     useEffect(() => {
         window.location.href = '' + url;
-    }, []);
+    }, [url]);
     return null;
-};
+}

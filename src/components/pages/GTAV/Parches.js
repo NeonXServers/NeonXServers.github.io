@@ -14,7 +14,7 @@ function GTAParches() {
             setPatches(snapshot.val());
         });
         return () => parcheRef.off();
-    }, []);
+    }, [db]);
 
     //         {
     //             "title": "",

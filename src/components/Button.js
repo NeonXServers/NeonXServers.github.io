@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom';
 const STYLES = ['btn--primary', 'btn--outline'];
 
 const SIZES = ['btn--medium', 'btn--large'];
-let Button;
-export default Button = ({
+export default function Button({
     children,
     type,
     buttonStyle,
@@ -14,7 +13,7 @@ export default Button = ({
     to,
     isUrl,
     onClick,
-}) => {
+}) {
     const checkButtonStyle = STYLES.includes(buttonStyle)
         ? buttonStyle
         : STYLES[0];
@@ -60,4 +59,4 @@ export default Button = ({
             </div>
         );
     }
-};
+}

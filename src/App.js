@@ -10,6 +10,7 @@ import ScrollToTop from './components/ScrollToTop';
 // import Redirect from './components/Redirect';  <Route path='/PATH' element={<Redirect url={'URL'} />} />
 import Err404 from './components/pages/404';
 import Redirect from './components/Redirect';
+//GENERATE_SOURCEMAP=false
 function App() {
     document.body.onscroll = () => hideCoverBar();
     document.body.onmousemove = () => hideCoverBar();

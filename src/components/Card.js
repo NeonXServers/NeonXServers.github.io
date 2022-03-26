@@ -15,7 +15,7 @@ function Card({ path, label, image, children, width, isUrl, tagColor }) {
             '--background-opacity-color',
             tagColor + '33'
         );
-    }, []);
+    }, [tagColor]);
 
     if (isUrl) {
         return (

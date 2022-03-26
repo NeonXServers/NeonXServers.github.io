@@ -23,7 +23,7 @@ function PatchCard({
                 tagColor + '33'
             );
         }
-    }, []);
+    }, [tagColor, tagLabel]);
     function tagsContainer() {
         let tag;
         if (tagLabel) {
