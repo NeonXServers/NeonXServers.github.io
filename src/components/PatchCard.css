@@ -6,11 +6,13 @@
     border-radius: 10px;
     min-width: 31vw;
     max-width: 31vw;
-    height: 500px;
+    height: 540px;
+    background-color: #383e42;
 }
 
 .patch-card-container:hover {
     box-shadow: 0px 0px 3vmin -1vmin #0095ff;
+    transition: all 0.2s ease-out;
 }
 
 .patch-cards__item__title {
@@ -47,9 +49,13 @@
 .patch-cards__item__text {
     border-radius: 0 0 10px 10px;
     height: 100%;
-    padding: 20px 30px;
+    padding: 20px 30px 0;
     background-color: #383e42;
-    overflow-y: scroll;
+    overflow: hidden;
+}
+.patch-cards__item__text hr {
+    opacity: 0;
+    height: 24px;
 }
 .patch-card-tags-container {
     display: flex;
@@ -67,7 +73,12 @@
     width: 7px;
     z-index: 0;
 }
-
+.patch-cards-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
 .patch-cards__item__text::-webkit-scrollbar-button {
     display: none;
 }

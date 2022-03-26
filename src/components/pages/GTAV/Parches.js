@@ -1,98 +1,43 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../../App.css';
 import Footer from '../../Footer';
 import PatchCard from '../../PatchCard';
 import './Parches.css';
+import { firebase } from '../../../initFirebase';
 
 function GTAParches() {
+    const [patches, setPatches] = useState(Array);
+    const db = firebase.database();
     useEffect(() => {
-        patchCards();
+        const parcheRef = db.ref('parches');
+        parcheRef.on('value', (snapshot) => {
+            setPatches(snapshot.val());
+        });
+        return () => parcheRef.off();
     }, []);
 
-    window.addEventListener('resize', function () {
-        patchCards();
-    });
-
-    const parche1 = {
-        tagColor: '#1A8700',
-        title: 'Notas de la versión V0.0.1',
-        tagLabel: '🔥 HOLA',
-        date: '📅 1/12/28',
-        added: ['Cosas nuevas', 'Cosas nuevas', 'Cosas nuevas', 'Cosas nuevas'],
-        modified: [
-            'Cosas modificadas',
-            'Cosas modificadas',
-            'Cosas modificadas',
-            'Cosas modificadas',
-        ],
-        removed: [
-            'Cosas eliminadas',
-            'Cosas eliminadas',
-            'Cosas eliminadas',
-            'Cosas eliminadas',
-        ],
-        events: ['Eventos', 'Eventos', 'Eventos', 'Eventos'],
-        others: ['Otras cosas', 'Otras cosas', 'Otras cosas', 'Otras cosas'],
-        ideas: [
-            'Cosas en el punto de mira',
-            'Cosas en el punto de mira',
-            '(Se harán en el futuro)',
-            '(Se harán en el futuro)',
-        ],
-    };
-    const parche2 = {
-        title: 'Notas de la versión V0.0.2',
-        date: '📅 11/12/28',
-        added: ['Cosas nuevas', 'Cosas nuevas', 'Cosas nuevas', 'Cosas nuevas'],
-        events: ['Eventos', 'Eventos', 'Eventos', 'Eventos'],
-        ideas: [
-            'Cosas en el punto de mira',
-            'Cosas en el punto de mira',
-            '(Se harán en el futuro)',
-            '(Se harán en el futuro)',
-        ],
-    };
-    const parche3 = {
-        title: 'Notas de la versión V0.0.3',
-        date: '📅 21/12/28',
-        removed: [
-            'Cosas eliminadas',
-            'Cosas eliminadas',
-            'Cosas eliminadas',
-            'Cosas eliminadas',
-        ],
-        events: ['Eventos', 'Eventos', 'Eventos', 'Eventos'],
-        others: ['Otras cosas', 'Otras cosas', 'Otras cosas', 'Otras cosas'],
-        ideas: [
-            'Cosas en el punto de mira',
-            'Cosas en el punto de mira',
-            '(Se harán en el futuro)',
-            '(Se harán en el futuro)',
-        ],
-    };
-
-    const parche4 = {
-        title: 'Notas de la versión V0.0.4',
-        date: '📅 31/12/28',
-        added: ['Cosas nuevas'],
-        modified: ['Cosas modificadas'],
-        removed: ['Cosas eliminadas'],
-        events: ['Eventos'],
-        others: ['Otras cosas'],
-        ideas: ['Cosas en el punto de mira', '(Se harán en el futuro)'],
-    };
-    const parche5 = {
-        tagLabel: '👋 Wenas',
-        title: 'Notas de la versión V0.0.5',
-        date: '📅 51/12/28',
-        added: ['Cosas nuevas', 'Cosas nuevas', 'Cosas nuevas', 'Cosas nuevas'],
-        others: ['Otras cosas'],
-    };
-
-    const parches = [parche1, parche2, parche3, parche4, parche5];
+    //         {
+    //             "title": "",
+    //             "date": "",
+    //             "tag": {
+    //                 "label": "",
+    //                 "color": ""
+    //             },
+    //             "description": {
+    //                 "added": [],
+    //                 "modified": [],
+    //                 "removed": [],
+    //                 "events": [],
+    //                 "others": [],
+    //                 "ideas": []
+    //             }
+    //         }
 
     function patchCards() {
         let cardList = [];
+        const parches = patches.filter((element) => {
+            return element !== null;
+        });
         for (let index = 0; index < parches.length; index++) {
             let parche = parches[index];
             let addEmoji = (emoji, text) => {
@@ -106,7 +51,7 @@ function GTAParches() {
                     }
                     return (
                         <>
-                            {x} <br />
+                            {x} <hr />
                         </>
                     );
                 }
@@ -116,18 +61,18 @@ function GTAParches() {
                     <PatchCard
                         key={'cardList' + index}
                         current
-                        tagLabel={parche.tagLabel}
-                        tagColor={parche.tagColor}
+                        tagLabel={parche.tag ? parche.tag.label : null}
+                        tagColor={parche.tag ? parche.tag.color : null}
                         title={parche.title}
                         date={parche.date}
                         children={
                             <>
-                                {addEmoji('🔶', parche.added)}
-                                {addEmoji('🔨', parche.modified)}
-                                {addEmoji('❌', parche.removed)}
-                                {addEmoji('🎭', parche.events)}
-                                {addEmoji('📚', parche.others)}
-                                {addEmoji('💡', parche.ideas)}
+                                {addEmoji('🔶', parche.description.added)}
+                                {addEmoji('🔨', parche.description.modified)}
+                                {addEmoji('❌', parche.description.removed)}
+                                {addEmoji('🎭', parche.description.events)}
+                                {addEmoji('📚', parche.description.others)}
+                                {addEmoji('💡', parche.description.ideas)}
                             </>
                         }
                     />
@@ -136,18 +81,18 @@ function GTAParches() {
                 cardList.push(
                     <PatchCard
                         key={'cardList' + index}
-                        tagLabel={parche.tagLabel}
-                        tagColor={parche.tagColor}
+                        tagLabel={parche.tag ? parche.tag.label : null}
+                        tagColor={parche.tag ? parche.tag.color : null}
                         title={parche.title}
                         date={parche.date}
                         children={
                             <>
-                                {addEmoji('🔶', parche.added)}
-                                {addEmoji('🔨', parche.modified)}
-                                {addEmoji('❌', parche.removed)}
-                                {addEmoji('🎭', parche.events)}
-                                {addEmoji('📚', parche.others)}
-                                {addEmoji('💡', parche.ideas)}
+                                {addEmoji('🔶', parche.description.added)}
+                                {addEmoji('🔨', parche.description.modified)}
+                                {addEmoji('❌', parche.description.removed)}
+                                {addEmoji('🎭', parche.description.events)}
+                                {addEmoji('📚', parche.description.others)}
+                                {addEmoji('💡', parche.description.ideas)}
                             </>
                         }
                     />

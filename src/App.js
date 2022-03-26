@@ -9,6 +9,7 @@ import GTAParches from './components/pages/GTAV/Parches';
 import ScrollToTop from './components/ScrollToTop';
 // import Redirect from './components/Redirect';  <Route path='/PATH' element={<Redirect url={'URL'} />} />
 import Err404 from './components/pages/404';
+import Redirect from './components/Redirect';
 function App() {
     document.body.onscroll = () => hideCoverBar();
     document.body.onmousemove = () => hideCoverBar();
@@ -23,7 +24,7 @@ function App() {
     }
     function showEE() {
         if (
-            global.NeonX.getEasterEgg &&
+            global.NeonX.EasterEgg &&
             window.location.pathname.toLowerCase() === '/ovecob'
         ) {
             console.log('Esto es un Easter Egg :)');
@@ -39,6 +40,12 @@ function App() {
                     <Route path='/' exact element={<Inicio />} />
                     <Route path='/gtav' element={<GTAV />} />
                     <Route path='/gtav/patch-notes' element={<GTAParches />} />
+                    <Route
+                        path='/discord'
+                        element={
+                            <Redirect url={'https://discord.gg/eC9XntUgtN'} />
+                        }
+                    />
                     <Route path='*' element={<Err404 />} />
                 </Routes>
             </Router>

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './PatchCard.css';
-
+import Button from './Button';
 function PatchCard({
     title,
     date,
@@ -86,6 +86,11 @@ function PatchCard({
                 {tagsContainer()}
             </div>
             <div className='patch-cards__item__text'>{children}</div>
+            <div className='patch-cards-button'>
+                <Button buttonStyle={'btn--outline'} to='/'>
+                    Más Información
+                </Button>
+            </div>
         </div>
     );
 }

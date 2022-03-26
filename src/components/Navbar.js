@@ -154,7 +154,7 @@ function Navbar() {
                             <ul className='dropdown-content'>
                                 <li className='dropdown-item'>
                                     <a
-                                        href='https://neonx.page.link/discord'
+                                        href='https://discord.gg/eC9XntUgtN'
                                         className='dropdown-links'
                                         onClick={closeMobileMenu}
                                     >
